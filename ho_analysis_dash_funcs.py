@@ -8,7 +8,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 
-pio.renderers.default = "browser"
+#pio.renderers.default = "browser"
 
 
 # ===== Get the .csv and  in the current directory  fuction ========
@@ -171,27 +171,5 @@ def process_ho(ho_df):
                     )
 
 
-# Start dash:
-
-'''
-app = dash.Dash()
-server = app.server
-app.layout = html.Div(children=[dcc.Graph(id='geo_plot',figure=geo_fig),
-                                dcc.Graph(id='bad_cells',figure=bad_cells_fig),
-                                dcc.Graph(id='geo_summ',figure=geo_summ_fig)
-                                ]
-                      )
-
-
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-# To be removed:
-# geo_fig.write_html(file, full_html=False, include_plotlyjs=True)
-# bad_cells_fig.write_html(file, full_html=False, include_plotlyjs=False)
-# geo_summ_fig.write_html(file, full_html=False, include_plotlyjs=False)
-
-# file.close()
-print("=== Dashbord done === \n\n")
-'''
-
